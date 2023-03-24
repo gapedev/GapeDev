@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+
+.navbar {
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding-right: 20px;
+  }
+
+  a {
+    color: $white;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
