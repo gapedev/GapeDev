@@ -1,8 +1,8 @@
 @use '../abstracts/variables' as *;
 
 .calculator {
-  width: 365px;
-  height: 350px;
+  width: 465px;
+  height: 450px;
   border: 1px solid #eee;
   border-radius: 10px;
   box-shadow: 2px 2px 2px #eee;
@@ -11,6 +11,7 @@
 
   button {
     outline: none;
+    cursor: pointer;
   }
 
   &__screen {
@@ -19,7 +20,7 @@
       padding: 20px;
       outline: none;
       text-align: right;
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 
@@ -34,8 +35,11 @@
     width: 100%;
 
     button {
-      width: 24%;
-      height: 50px;
+      width: 30%;
+      height: 60px;
+      font-size: 2rem;
+      background-color: $primary;
+      color: $white;
     }
   }
 
@@ -47,8 +51,11 @@
       justify-content: space-between;
 
       button {
-        width: 32%;
-        height: 50px;
+        width: 40%;
+        height: 75px;
+        background-color: $primary;
+        color: $white;
+        font-size: 2rem;
       }
     }
   }
@@ -57,6 +64,7 @@
     flex: 1;
 
     button {
+      font-size: 2rem;
       margin-left: 5%;
       width: 95%;
       height: 100%;
