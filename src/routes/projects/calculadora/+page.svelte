@@ -190,3 +190,79 @@
     </div>
   </div>
 </div>
+
+<style lang="scss">
+  .calculator {
+    width: 465px;
+    height: 450px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #eee;
+    padding: 10px;
+    margin: 50px auto;
+
+    button {
+      outline: none;
+      cursor: pointer;
+    }
+
+    &__screen {
+      input {
+        width: 100%;
+        padding: 20px;
+        outline: none;
+        text-align: right;
+        font-size: 25px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__operations {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      button {
+        width: 30%;
+        height: 60px;
+        font-size: 2rem;
+        background-color: $primary;
+        color: $white;
+      }
+    }
+
+    &__numbers {
+      width: 75%;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          width: 40%;
+          height: 75px;
+          background-color: $primary;
+          color: $white;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__equal {
+      flex: 1;
+
+      button {
+        font-size: 2rem;
+        margin-left: 5%;
+        width: 95%;
+        height: 100%;
+        background-color: $secondary;
+        color: #eee;
+      }
+    }
+  }
+</style>

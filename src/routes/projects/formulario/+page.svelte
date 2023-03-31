@@ -1,7 +1,7 @@
 <script>
-  import Input from "../../../lib/input.svelte";
-  import Dropdown from "../../../lib/dropdown.svelte";
-  import Rangos from "../../../lib/rangos.svelte";
+  import Input from "$lib/input.svelte";
+  import Dropdown from "$lib/dropdown.svelte";
+  import Rangos from "$lib/rangos.svelte";
 
   let estado = {
     nombre: "Gabi",

@@ -1,5 +1,6 @@
 <script>
-  import Hero from "../lib/hero.svelte";
+  import "../../static/styles.scss";
+  import Hero from "$lib/hero.svelte";
 </script>
 
 <Hero />
