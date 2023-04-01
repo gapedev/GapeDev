@@ -1,30 +1,46 @@
 <script>
-  let infos = [
+  const infos = [
     {
-      nombre: "Gabi Pérez Licerán",
-      profesion: "Front-End Developer",
-      experiencia: "5 Años",
-      email: "gapedev@gmail.com",
-      linkedin:
-        "https://www.linkedin.com/in/gabriel-p%C3%A9rez-licer%C3%A1n-b0826a14b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BvIfRJmdNRgCguGUgbDJ5dQ%3D%3D",
-      web: "https://gapedev.netlify.app/",
-      telefono: "601 06 87 78",
+      title: "Nombre",
+      info: "Gabriel Pérez Licerán",
+    },
+    {
+      title: "Profesión",
+      info: "Front-End Developer",
+    },
+    {
+      title: "Experiencia",
+      info: "5 Años",
+    },
+    {
+      title: "Email",
+      info: "gapedev@gmail.com",
+    },
+    {
+      title: "Teléfono",
+      info: "601 06 87 78",
+    },
+    {
+      title: "Github",
+      info: "https://github.com/gapedev",
+    },
+    {
+      title: "Linkedin",
+      info: "https://www.linkedin.com/in/gabriel-p%C3%A9rez-licer%C3%A1n-b0826a14b/",
+    },
+    {
+      title: "Población",
+      info: "Palma de Mallorca",
     },
   ];
 </script>
 
 <div class="about">
   {#each infos as info (info)}
-    <slot
-      name="gabi"
-      nombre={info.nombre}
-      profesion={info.profesion}
-      experiencia={info.experiencia}
-      email={info.email}
-      linkedin={info.linkedin}
-      web={info.web}
-      telefono={info.telefono}
-    />
+    <div class="about__container">
+      <slot name="title" title={info.title} />
+      <slot name="info" info={info.info} />
+    </div>
   {/each}
 </div>
 
@@ -32,11 +48,14 @@
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    border: 1px solid $secondary;
+    border-radius: 5px;
+    padding: 20px;
+    width: 900px;
 
-    span {
-      color: $white;
-      font-weight: bold;
+    &__container {
+      display: flex;
+      padding: 10px;
     }
   }
 </style>

@@ -8,6 +8,7 @@
 
 <style lang="scss">
   .title {
+    padding-bottom: 50px;
     h2 {
       color: $white;
       font-size: 2rem;
