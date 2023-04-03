@@ -10,6 +10,14 @@
  /*** Gradiantes ***/
  $bg-gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
+ /*** Botón ***/
+ $width: 130px;
+ $height: 35px;
+ $tooltip-height: 35px;
+ $tooltip-width: 90px;
+ $gap-between-tooltip-to-button: 18px;
+ $tooltip-color: #fff;
+
  * {
    margin: 0;
    padding: 0;
@@ -33,4 +41,8 @@
 
  li {
    list-style: none;
+ }
+
+ .container {
+   padding: 90px;
  }

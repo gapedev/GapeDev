@@ -51,6 +51,7 @@
     border: 1px solid $secondary;
     border-radius: 5px;
     padding: 20px;
+    margin: 20px 0;
     width: 900px;
 
     &__container {

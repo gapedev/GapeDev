@@ -2,33 +2,38 @@
   import Title from "$lib/title.svelte";
   import CajaInfo from "$lib/caja-info.svelte";
   import Gabi from "../../static/img/foto-gabi.jpg";
+  import Button from "../lib/button.svelte";
+  import curriculum from "../../static/archivos/curriculum-dev.pdf";
 </script>
 
-<div class="info-container">
+<div class="info-container container">
   <div class="info-container__img">
     <img src={Gabi} alt="" />
   </div>
   <div class="info-container__info">
     <Title title="Sobre Mí" />
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-      asperiores!
+      Durante los últimos 5 años he trabajado de Front-End, desarrollando
+      aplicaciones web totalmente reponsive, con flex design. Ahora, estoy
+      aprendiendo varios frameworks, entre ellos Svelte y React, para aumentar
+      mi conocimiento y aparte de maquetar, poder crear las aplicaciones desde
+      0.
     </p>
     <CajaInfo>
       <span slot="title" let:title>{title}:</span>
       <p slot="info" let:info>{info}</p>
     </CajaInfo>
+    <Button link={curriculum} download="true" boton="Descargar CV" />
   </div>
 </div>
 
 <style lang="scss">
   .info-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
 
     &__img {
-      width: 400px;
+      width: 500px;
     }
   }
   span {
@@ -39,5 +44,6 @@
 
   p {
     color: $white;
+    line-height: 1.5;
   }
 </style>
