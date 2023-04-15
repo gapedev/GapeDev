@@ -24,14 +24,6 @@
       title: "Github",
       info: "https://github.com/gapedev",
     },
-    {
-      title: "Linkedin",
-      info: "https://www.linkedin.com/in/gabriel-p%C3%A9rez-licer%C3%A1n-b0826a14b/",
-    },
-    {
-      title: "Población",
-      info: "Palma de Mallorca",
-    },
   ];
 </script>
 
@@ -56,6 +48,7 @@
 
     &__container {
       display: flex;
+      align-items: center;
       padding: 10px;
     }
   }

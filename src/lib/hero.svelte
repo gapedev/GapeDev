@@ -50,6 +50,7 @@
 
       p {
         color: $white;
+        padding-bottom: 10px;
       }
     }
   }

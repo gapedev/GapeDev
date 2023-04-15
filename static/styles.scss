@@ -24,7 +24,7 @@
    box-sizing: border-box;
  }
 
- html {
+ body {
    background-color: $bg-body;
    font-family: $body-font;
  }
@@ -44,5 +44,5 @@
  }
 
  .container {
-   padding: 90px;
+   padding: 80px 90px;
  }

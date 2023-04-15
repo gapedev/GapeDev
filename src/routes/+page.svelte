@@ -2,8 +2,9 @@
   import Title from "$lib/title.svelte";
   import CajaInfo from "$lib/caja-info.svelte";
   import Gabi from "../../static/img/foto-gabi.jpg";
-  import Button from "../lib/button.svelte";
+  import Button from "$lib/button.svelte";
   import curriculum from "../../static/archivos/curriculum-dev.pdf";
+  import SectionTabs from "../sections/sectionTabs.svelte";
 </script>
 
 <div class="info-container container">
@@ -26,6 +27,8 @@
     <Button link={curriculum} download="true" boton="Descargar CV" />
   </div>
 </div>
+
+<SectionTabs />
 
 <style lang="scss">
   .info-container {
