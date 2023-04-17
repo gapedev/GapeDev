@@ -4,7 +4,7 @@
   import Gabi from "../../static/img/foto-gabi.jpg";
   import Button from "$lib/button.svelte";
   import curriculum from "../../static/archivos/curriculum-dev.pdf";
-  import SectionTabs from "../sections/sectionTabs.svelte";
+  import HomeTabs from "../sections/homeTabs.svelte";
 </script>
 
 <div class="info-container container">
@@ -28,7 +28,7 @@
   </div>
 </div>
 
-<SectionTabs />
+<HomeTabs />
 
 <style lang="scss">
   .info-container {

@@ -1,7 +1,7 @@
 <script>
-  import portfolioTab from "$lib/portfolioTab.svelte";
   import Tabs from "$lib/tabs.svelte";
-  import ProjectsTab from "$lib/projectsTab.svelte";
+  import ProjectsTab from "$lib/home/projectsTab.svelte";
+  import portfolioTab from "$lib/home/portfolioTab.svelte";
 
   export const items = [
     {

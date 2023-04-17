@@ -1,6 +1,5 @@
 <script>
   import Title from "./title.svelte";
-
   export let items = [];
   export let activeTabValue = 1;
 
