@@ -1,1 +1,7 @@
-<h2>Hola Tab</h2>
+<script>
+  import Card from "../card.svelte";
+</script>
+
+<Card />
+
+<style></style>
