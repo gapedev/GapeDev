@@ -17,7 +17,6 @@
 
       &:before {
         content: "";
-        background-color: $secondary;
         width: 50px;
         height: 3px;
         position: absolute;

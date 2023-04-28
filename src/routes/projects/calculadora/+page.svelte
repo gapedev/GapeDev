@@ -260,7 +260,6 @@
         margin-left: 5%;
         width: 95%;
         height: 100%;
-        background-color: $secondary;
         color: #eee;
       }
     }

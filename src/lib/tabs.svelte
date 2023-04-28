@@ -41,22 +41,19 @@
     }
 
     span {
-      background-color: white;
+      background-color: $white;
       padding: 5px 20px;
       border-radius: 30px;
-      color: $secondary;
       font-weight: bold;
       cursor: pointer;
       transition: all ease-in-out 0.3s;
 
       &:hover {
-        background-color: $secondary;
         color: $white;
       }
     }
 
     li.active > span {
-      background-color: $secondary;
       color: $white;
     }
   }

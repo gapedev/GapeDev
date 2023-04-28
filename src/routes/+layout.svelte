@@ -1,7 +1,8 @@
 <script>
-  import "../../static/styles.scss";
-  import Hero from "$lib/hero.svelte";
+  import Navbar from "$lib/navbar.svelte";
+  export const prerender = true;
+  export const csr = false;
 </script>
 
-<Hero />
+<Navbar />
 <slot />

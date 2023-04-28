@@ -1,30 +1,44 @@
 <script>
-  import Title from "$lib/title.svelte";
-  import CajaInfo from "$lib/caja-info.svelte";
-  import Gabi from "../../static/img/foto-gabi.jpg";
+  import Dev from "../../static/img/foto-dev.png";
   import Button from "$lib/button.svelte";
   import curriculum from "../../static/archivos/curriculum-dev.pdf";
   import HomeTabs from "../sections/homeTabs.svelte";
+  import { Motion } from "svelte-motion";
+
+  const quote = {
+    initial: {
+      opacity: 0,
+      x: 50,
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+        staggerChildren: 0.08,
+      },
+    },
+  };
 </script>
 
 <div class="info-container container">
   <div class="info-container__img">
-    <img src={Gabi} alt="" />
+    <img src={Dev} alt="" />
   </div>
   <div class="info-container__info">
-    <Title title="Sobre Mí" />
+    <Motion let:motion variants={quote} initial="initial" animate="animate">
+      <h1 use:motion>turning vision into reality with code and design</h1>
+    </Motion>
     <p>
-      Durante los últimos 5 años he trabajado de Front-End, desarrollando
-      aplicaciones web totalmente reponsive, con flex design. Ahora, estoy
-      aprendiendo varios frameworks, entre ellos Svelte y React, para aumentar
-      mi conocimiento y aparte de maquetar, poder crear las aplicaciones desde
-      0.
+      For the last 5 years I have worked as Front-End, developing fully
+      responsive web applications, with flex design. Now, I'm learning several
+      frameworks, including Svelte and React, to increase my knowledge and apart
+      from layout, to be able to create applications from 0.
     </p>
-    <CajaInfo>
-      <span slot="title" let:title>{title}:</span>
-      <p slot="info" let:info>{info}</p>
-    </CajaInfo>
-    <Button link={curriculum} download="true" boton="Descargar CV" />
+    <div class="info-container__buttons">
+      <Button link={curriculum} download="true" boton="Descargar CV" />
+    </div>
   </div>
 </div>
 
@@ -33,10 +47,37 @@
 <style lang="scss">
   .info-container {
     display: grid;
-    grid-template-columns: 0.6fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 
     &__img {
-      width: 500px;
+      img {
+        width: 100%;
+      }
+    }
+    &__info {
+      h1 {
+        text-transform: capitalize;
+        font-weight: bold;
+        display: inline-block;
+        font-size: 5rem;
+        text-align: left;
+      }
+
+      p {
+        margin-top: 20px;
+        text-align: left;
+        display: inline-block;
+        opacity: 0.7;
+        font-size: 1.3rem;
+      }
+    }
+    &__buttons {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
     }
   }
   span {
@@ -46,7 +87,6 @@
   }
 
   p {
-    color: $white;
     line-height: 1.5;
   }
 </style>

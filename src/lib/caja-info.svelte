@@ -40,7 +40,6 @@
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid $secondary;
     border-radius: 5px;
     padding: 20px;
     margin: 20px 0;

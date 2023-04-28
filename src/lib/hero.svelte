@@ -1,10 +1,11 @@
 <script>
   import Gabi from "../../static/img/foto-gabi.jpg";
   import Navbar from "./navbar.svelte";
+  import { Links } from "../services/links";
 </script>
 
 <section class="section-hero">
-  <Navbar />
+  <Navbar {Links} />
   <div class="section-hero__container">
     <div class="section-hero__image">
       <img src={Gabi} alt="" />
@@ -45,7 +46,6 @@
 
       h1 {
         font-size: 3rem;
-        color: $secondary;
       }
 
       p {

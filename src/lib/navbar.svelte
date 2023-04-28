@@ -1,57 +1,91 @@
-<div class="navbar">
-  <a href="/"> <p><span>G</span>ape<span>D</span>ev</p></a>
+<script>
+  import Logo from "./logo.svelte";
+  import Links from "../services/links";
+  import Github from "./icons/github.svelte";
+  import Linkedin from "./icons/linkedin.svelte";
+  import { Motion } from "svelte-motion";
+</script>
+
+<header class="section-header">
   <nav>
     <ul>
-      <li>
-        <a href="/">Inicio</a>
-      </li>
-      <li>
-        <a href="/projects">Proyectos</a>
-      </li>
-      <li>
-        <a href="/projects">Currículum</a>
-      </li>
-      <li>
-        <a href="/projects">Contacto</a>
-      </li>
+      {#each Links as { href, title }}
+        <li>
+          <a {href}>{title}</a>
+          <span>&nbsp</span>
+        </li>
+      {/each}
     </ul>
   </nav>
-</div>
+  <Logo />
+  <nav class="section-header__icons">
+    <Motion let:motion whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
+      <span use:motion><Github width={38} /></span>
+    </Motion>
+    <Motion let:motion whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
+      <span use:motion><Linkedin width={38} /></span>
+    </Motion>
+  </nav>
+  <nav />
+</header>
 
 <style lang="scss">
-  .navbar {
+  .section-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-
+    padding: 20px 100px;
+    width: 100%;
     ul {
       display: flex;
+      gap: 25px;
     }
 
     li {
-      padding-right: 30px;
+      display: flex;
+      position: relative;
     }
 
     a {
-      color: $white;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: all ease-in-out 0.3s;
+      color: black;
 
-      &:hover {
-        color: $secondary;
+      &:after {
+        content: "";
+        display: inline-block;
+        background-color: $primary;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: width ease 0.3s;
+      }
+      &:hover::after {
+        width: 95%;
       }
     }
 
-    p {
-      font-size: 2rem;
-      color: $secondary;
-      font-weight: bold;
+    &__icons {
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
+  }
 
-    span {
-      color: $white;
+  .active {
+    &:after {
+      content: "";
+      display: inline-block;
+      background-color: $primary;
+      width: 0;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: width ease 0.3s;
+    }
+    &:hover::after {
+      width: 95%;
     }
   }
 </style>

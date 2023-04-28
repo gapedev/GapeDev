@@ -1,22 +1,12 @@
  /*** Colores ***/
- $primary: #1e2233;
- $secondary: #fd5c57;
+ $primary: #000;
  $white: #ffff;
- $bg-body: $primary;
 
  /*** Fuentes ***/
  $body-font: "Montserrat", sans-serif;
 
  /*** Gradiantes ***/
  $bg-gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-
- /*** Botón ***/
- $width: 130px;
- $height: 35px;
- $tooltip-height: 35px;
- $tooltip-width: 90px;
- $gap-between-tooltip-to-button: 18px;
- $tooltip-color: #fff;
 
  * {
    margin: 0;
@@ -25,7 +15,6 @@
  }
 
  body {
-   background-color: $bg-body;
    font-family: $body-font;
  }
 
@@ -44,5 +33,5 @@
  }
 
  .container {
-   padding: 80px 90px;
+   padding: 25px 100px;
  }
