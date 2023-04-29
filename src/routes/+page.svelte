@@ -1,10 +1,7 @@
 <script>
   import Dev from "../../static/img/foto-dev.png";
   import Button from "$lib/button.svelte";
-  import curriculum from "../../static/archivos/curriculum-dev.pdf";
-  import HomeTabs from "../sections/homeTabs.svelte";
   import { Motion } from "svelte-motion";
-
   const quote = {
     initial: {
       opacity: 0,
@@ -26,7 +23,7 @@
   <div class="info-container__img">
     <img src={Dev} alt="" />
   </div>
-  <div class="info-container__info">
+  <article class="info-container__info">
     <Motion let:motion variants={quote} initial="initial" animate="animate">
       <h1 use:motion>turning vision into reality with code and design</h1>
     </Motion>
@@ -37,12 +34,13 @@
       from layout, to be able to create applications from 0.
     </p>
     <div class="info-container__buttons">
-      <Button link={curriculum} download="true" boton="Descargar CV" />
+      <Button href="/archivos/curriculum-dev.pdf" download="Currículum"
+        >Currículum</Button
+      >
+      <a href="mailto:gapedev@gmail.com" target="_blank">Contact</a>
     </div>
-  </div>
+  </article>
 </div>
-
-<HomeTabs />
 
 <style lang="scss">
   .info-container {
@@ -78,6 +76,13 @@
       display: flex;
       align-items: center;
       margin-top: 20px;
+      gap: 20px;
+
+      a {
+        color: $primary;
+        font-size: 1.3rem;
+        border-bottom: 2px solid $primary;
+      }
     }
   }
   span {
