@@ -2,3 +2,7 @@
 @use './abstracts/index' as *;
 /*** BASE ***/
 @use './base/index' as *;
+/*** PAGES ***/
+@use './pages/index' as *;
+/*** COMPONENTS ***/
+@use './components/index' as *;

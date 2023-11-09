@@ -1,0 +1,50 @@
+@use '../abstracts/' as *;
+
+.section-home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 200px;
+
+  &__text {
+    h2 {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 3rem;
+      color: $primary;
+      font-weight: bold;
+      width: 500px;
+      animation: olivetti 3s steps(30), pampalluga 0.5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    p {
+      padding-right: 750px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.875rem;
+    padding-top: 1.875rem;
+  }
+}
+
+@keyframes olivetti {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes pampalluga {
+  50% {
+    border-color: transparent;
+  }
+}

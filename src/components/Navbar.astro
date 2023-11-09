@@ -1,0 +1,41 @@
+---
+const navbar = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Portfolio",
+    path: "/portfolio",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
+---
+
+<nav class="navbar container">
+  <div class="navbar__title">
+    <h1>GapeDev</h1>
+  </div>
+  <div class="navbar__menu">
+    <ul>
+      {
+        navbar.map(({ path, name }) => (
+          <li>
+            <a href={path}>{name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>

@@ -1,19 +1,17 @@
 @use '../abstracts/index' as *;
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
 
 html,
 body {
   background-color: $black;
   color: $white;
-  font-family: $body-font;
+  font-family: $page-font;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $title-font;
+.container {
+  @media screen and (width>=75rem) {
+    padding: 1.25rem 6.25rem 0 6.25rem;
+  }
 }

@@ -1,10 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>HOLA GABI</h1>
-		<p>ESTO ES TU PROYECTO</p>
+		<section class="section-home container">
+			<div class="section-home__text">
+				<h2>Hi!, I´m Gabi Pérez</h2>
+				<span>Frontend Developer</span>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugiat
+					harum at vel iure quod tempora ratione eveniet deserunt provident.
+				</p>
+			</div>
+			<div class="section-home__buttons">
+				<Button link="/projects" name="Projects" />
+				<Button name="Contact" />
+			</div>
+			<div class="section-home__image"></div>
+		</section>
 	</main>
 </Layout>
