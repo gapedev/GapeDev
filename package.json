@@ -13,6 +13,7 @@
     "astro": "^3.5.0"
   },
   "devDependencies": {
+    "astro-icon": "^0.8.1",
     "sass": "^1.69.5",
     "standard": "^17.1.0"
   },

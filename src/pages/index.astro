@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,7 +19,9 @@ import Button from "../components/Button.astro";
 				<Button link="/projects" name="Projects" />
 				<Button name="Contact" />
 			</div>
-			<div class="section-home__image"></div>
+			<div class="section-home__image">
+				<Icon width={30} name="bi:linkedin" />
+			</div>
 		</section>
 	</main>
 </Layout>
