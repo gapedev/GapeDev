@@ -1,24 +1,24 @@
 /*** BREAKPOINTS ***/
 @mixin tablet {
-  @media screen and (width>=769px) {
+  @media screen and (width>=48.0625rem) {
     @content
   }
 }
 
 @mixin desktop {
-  @media screen and (width>=1024px) {
+  @media screen and (width>=64rem) {
     @content
   }
 }
 
 @mixin widescreen {
-  @media screen and (width>=1216px) {
+  @media screen and (width>=76rem) {
     @content
   }
 }
 
 @mixin fullhd {
-  @media screen and (width>=1408px) {
+  @media screen and (width>=88rem) {
     @content
   }
 }

@@ -15,3 +15,40 @@ body {
     padding: 1.25rem 6.25rem 0 6.25rem;
   }
 }
+
+
+body:before {
+  content: "xsmall";
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 20em) {
+  body:before {
+    content: "mobile";
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  body:before {
+    content: "tablet";
+  }
+}
+
+@media (min-width: 64rem) {
+  body:before {
+    content: "desktop";
+  }
+}
+
+@media (min-width: 64rem) {
+  body:before {
+    content: "widescreen";
+  }
+}
+
+@media (min-width: 88rem) {
+  body:before {
+    content: "fullhd";
+  }
+}

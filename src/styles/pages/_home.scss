@@ -6,9 +6,9 @@
   flex-direction: column;
   align-items: center;
 
-  @include desktop {
+  @include widescreen {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr .5fr;
     align-items: center;
     gap: 50px;
     padding-top: 200px;
@@ -21,7 +21,7 @@
         text-align: center;
         font-weight: bold;
 
-        @include tablet {
+        @include widescreen {
           font-size: 5rem;
           font-weight: bold;
           text-align: inherit;
@@ -35,7 +35,7 @@
         font-weight: bold;
         text-align: center;
 
-        @include tablet {
+        @include widescreen {
           display: inline-block;
           font-size: 3rem;
           color: $primary;
@@ -51,13 +51,23 @@
         text-wrap: balance;
         font-size: 1.3rem;
         font-weight: 600;
+        text-align: center;
+
+        @include widescreen {
+          text-align: inherit;
+        }
       }
     }
 
     &--buttons {
       display: flex;
+      justify-content: center;
       gap: 1.875rem;
       padding-top: 1.875rem;
+
+      @include widescreen {
+        justify-content: inherit;
+      }
 
       a {
         letter-spacing: 2px;
@@ -66,7 +76,14 @@
 
     &--rrss {
       display: flex;
+      justify-content: center;
       gap: 20px;
+      padding-bottom: 24px;
+
+      @include widescreen {
+        justify-content: inherit;
+        padding-bottom: inherit;
+      }
 
       a {
         border-radius: 60px;
