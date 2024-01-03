@@ -1,5 +1,4 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts/index' as *;
 
 .section-home {
   display: flex;
@@ -40,7 +39,7 @@
           font-size: 3rem;
           color: $primary;
           font-weight: bold;
-          width: 500px;
+          width: 470px;
           animation: olivetti 3s steps(30), pampalluga 0.5s step-end infinite alternate;
           white-space: nowrap;
           overflow: hidden;
