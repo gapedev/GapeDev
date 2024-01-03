@@ -1,9 +1,14 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__title {
     h1 {
@@ -29,5 +34,27 @@
         }
       }
     }
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #081b29;
+  opacity: .5;
+
+  @include desktop {
+    display: none;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+    z-index: 3;
   }
 }

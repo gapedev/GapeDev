@@ -1,26 +1,10 @@
 ---
-const navbar = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "About",
-    path: "/about",
-  },
-  {
-    name: "Portfolio",
-    path: "/portfolio",
-  },
-  {
-    name: "Projects",
-    path: "/projects",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
-];
+import { NAVBAR } from "../services/navbar";
+import Home from "../components/icons/Home.astro";
+import User from "../components/icons/User.astro";
+import Porfolio from "../components/icons/Porfolio.astro";
+import Projects from "../components/icons/Projects.astro";
+import Contact from "./icons/Contact.astro";
 ---
 
 <nav class="navbar container">
@@ -30,12 +14,22 @@ const navbar = [
   <div class="navbar__menu">
     <ul>
       {
-        navbar.map(({ path, name }) => (
+        NAVBAR.map(({ path, name }) => (
           <li>
             <a href={path}>{name}</a>
           </li>
         ))
       }
     </ul>
+  </div>
+</nav>
+
+<nav class="navbar-mobile">
+  <div class="navbar-mobile__icon">
+    <Home />
+    <User />
+    <Porfolio />
+    <Projects />
+    <Contact />
   </div>
 </nav>
