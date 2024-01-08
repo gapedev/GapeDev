@@ -6,13 +6,13 @@
 
 html,
 body {
-  background-color: $black;
+  background-color: $bgmain;
   color: $white;
   font-family: $page-font;
 }
 
 .container {
-  padding: 1.25rem 6.25rem 3.25rem 6.25rem;
+  padding: 1.25rem 3.25rem 5.25rem;
 
   @include widescreen {
     padding: 1.25rem 6.25rem 1.25rem 6.25rem;

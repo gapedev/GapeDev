@@ -7,7 +7,7 @@ import Projects from "../components/icons/Projects.astro";
 import Contact from "./icons/Contact.astro";
 ---
 
-<nav class="navbar container">
+<nav class="navbar">
   <div class="navbar__title">
     <a href="/"><h1>GapeDev</h1></a>
   </div>
@@ -26,10 +26,20 @@ import Contact from "./icons/Contact.astro";
 
 <nav class="navbar-mobile">
   <div class="navbar-mobile__icon">
-    <Home />
-    <User />
-    <Porfolio />
-    <Projects />
-    <Contact />
+    <li>
+      <a href="/"><Home /></a>
+    </li>
+    <li>
+      <a href="/about"><User /></a>
+    </li>
+    <li>
+      <a href="/portfolio"><Porfolio /></a>
+    </li>
+    <li>
+      <a href="/projects"><Projects /></a>
+    </li>
+    <li>
+      <a href="/contact"><Contact /></a>
+    </li>
   </div>
 </nav>

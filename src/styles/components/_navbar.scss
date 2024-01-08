@@ -7,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $bgheader;
+    padding: 24px;
   }
 
   &__title {
@@ -29,7 +31,7 @@
         &:hover {
           transform: scale(1.4);
           transition: all ease-in-out .3s;
-          color: $primary;
+          color: $btnbg;
         }
       }
     }
@@ -41,6 +43,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  background-color: $bgheader;
 
 
   @include desktop {
@@ -49,7 +52,7 @@
 
   &__icon {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 24px;
     padding: 16px;

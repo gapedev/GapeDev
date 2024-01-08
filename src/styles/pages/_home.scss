@@ -28,29 +28,35 @@
       }
 
       span {
-        display: block;
-        font-size: 1.5rem;
-        color: $primary;
-        font-weight: bold;
-        text-align: center;
 
-        @include widescreen {
-          display: inline-block;
-          font-size: 3rem;
-          color: $primary;
+        &:nth-child(2) {
+          display: block;
+          font-size: 1.5rem;
+          color: $btnbg;
           font-weight: bold;
-          width: 470px;
-          animation: olivetti 3s steps(30), pampalluga 0.5s step-end infinite alternate;
-          white-space: nowrap;
-          overflow: hidden;
+          text-align: center;
+
+          @include widescreen {
+            display: inline-block;
+            font-size: 3rem;
+            color: $btnbg;
+            font-weight: bold;
+            width: 460px;
+            animation: olivetti 3s steps(30), pampalluga 0.5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+          }
         }
+
+        color: $btnbg;
       }
 
       p {
         text-wrap: balance;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 600;
         text-align: center;
+        line-height: 1.5;
 
         @include widescreen {
           text-align: inherit;
@@ -86,15 +92,13 @@
 
       a {
         border-radius: 60px;
-        border: 2px solid $primary;
+        border: 2px solid;
         padding: 10px;
         margin-top: 30px;
-        color: $primary;
         transition: all ease-in-out .3s;
 
         &:hover {
-          background-color: $primary;
-          color: $black;
+          color: $btnbg;
           transition: all ease-in-out .3s;
         }
       }
@@ -105,7 +109,11 @@
 
     img {
       border-radius: 10%;
-      height: 600px;
+
+
+      @include desktop {
+        height: 600px;
+      }
     }
   }
 }

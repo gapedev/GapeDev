@@ -1,16 +1,5 @@
 @use '../abstracts/' as *;
 
-// .button {
-//   border-radius: 10px;
-//   border-color: 1px solid $primary;
-//   background-color: $primary;
-//   color: $black;
-//   font-weight: bold;
-//   letter-spacing: 2px;
-//   padding: 10px 30px;
-//   font-size: 1.2rem;
-// }
-
 .button,
 .button *,
 .button :after,
@@ -24,22 +13,24 @@
 .button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-appearance: button;
-  background-color: #00abf0;
+  background-color: $btnbg;
   background-image: none;
-  color: #fff;
+  color: $bgmain;
   cursor: pointer;
   font-weight: 900;
-  line-height: 1.5;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
-  text-transform: uppercase;
   border-radius: 99rem;
   overflow: hidden;
-  padding: 20px 40px;
+  padding: 7px;
   position: relative;
   display: flex;
 
+  @include desktop {
+    padding: 2px 20px;
+    line-height: 2.5rem;
+  }
 }
 
 .button:disabled {
@@ -56,11 +47,6 @@
 
 .button [hidden] {
   display: none;
-}
-
-
-.button:hover {
-  color: $primary;
 }
 
 .button a {
